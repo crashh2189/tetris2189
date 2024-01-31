@@ -98,13 +98,15 @@ void Send_webhook(std::wstring url, std::string username, std::string content)
     return;
 }
 
-void Send_user(std::wstring url, std::wstring token, std::string content)
+void Send_user(std::wstring channelid, std::wstring token, std::string content)
 {
     HINTERNET hSession, hConnect, hRequest;
     BOOL  bResults = FALSE;
     DWORD dwSize = 0;
     DWORD dwDownloaded = 0;
     LPSTR pszOutBuffer;
+
+    std::wstring url = L"/api/v9/channels/" + channelid + L"/messages";
 
     // Initialize WinHTTP session.
     hSession = WinHttpOpen(L"WinHTTP Example/1.0",
